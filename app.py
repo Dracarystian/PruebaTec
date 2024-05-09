@@ -1,7 +1,13 @@
 from flask import Flask, jsonify, request
 from Server.connect import connection_bd
+from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
+cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:5713"}})
+
 
 # Endpoint para obtener todos los clientes
 @app.route('/api/clientes', methods=['GET'])
