@@ -19,3 +19,8 @@ Es de mis primeras veces usando esta tecnología, muy cómoda y facil de usar.
 el front con el back del aplicativo y quedo listo para realizar las peticiones https futuras para cuando culmine el front. Por el momento el servidor esta corriendo en el localhost de flask (port:5000), pero planeo dockerizar la aplicacion para poderla desplegar en cualquier entorno que permita docker.
 
 **En las horas siguientes a esta entrega seguiré manipulando el repositorio para dockerizar la aplicación (probablemente cuando leas el README ya estará hecho), y tambien para terminar con el front y el aplicativo en si**
+
+# Actualización
+
+- Se modifico el app.py para que reciba una img que pertenecera al cliente registrado. 
+- Por parte del front se modifica el Register para que cuando reciba una ciudad en el registro se le asigne automaticamente el Codigo_ciudad y el Codigo_departamento
