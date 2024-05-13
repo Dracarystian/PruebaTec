@@ -1,8 +1,7 @@
-//import { useState } from 'react'
+import { useState } from 'react'
 import './App.css'
-//import { Input } from "@/components/ui/input"
+import Home from './pages/Home'
 import Register from './pages/Register'
-//import Home from './pages/Home'
 
 
 function App() {
@@ -10,8 +9,9 @@ function App() {
 
   return (
     <>
-      <Register />
-
+    <div>
+      <Home/>
+    </div>
     </>
   )
 }

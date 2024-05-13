@@ -1,52 +1,81 @@
 import React from "react";
+import { Card, CardImage, CardContent, CardTitle } from "@/components/ui/card";
 import {
   Command,
+  CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
   CommandSeparator,
+  CommandShortcut,
 } from "@/components/ui/command";
 
-import {
-  Card,
-  CardHeader,
-} from "@/components/ui/card";
-
-const Home = () => {
+function Home() {
   return (
     <>
-      <div>
-        <Command>
-          <CommandInput placeholder="Type a command or search..." />
-          <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup heading="Suggestions">
-              <CommandItem>Calendar</CommandItem>
-              <CommandItem>Search Emoji</CommandItem>
-              <CommandItem>Calculator</CommandItem>
-            </CommandGroup>
-            <CommandSeparator />
-            <CommandGroup heading="Settings">
-              <CommandItem>Profile</CommandItem>
-              <CommandItem>Billing</CommandItem>
-              <CommandItem>Settings</CommandItem>
-            </CommandGroup>
-          </CommandList>
+      <div className="grid grid-cols-1 gap-4">
+      <Command>
+          <CommandInput placeholder="Buscar por numero de Cédula" />
         </Command>
-        <Card>
+
+        <Card className="w-339 h-188.16 relative">
           <CardImage
-            src="/ruta/de/la/imagen.jpg"
-            alt="Descripción de la imagen"
+            src="src/assets/img/imgAndres.jpg"
+            alt="Andres Laverde"
+            className="w-full h-full rounded-lg"
           />
-          <CardHeader>
-            <h3>Título de la tarjeta</h3>
-          </CardHeader>
+          <CardContent
+            className="absolute bottom-0 left-0 right-0"
+            style={{ background: "white" }}
+          >
+            <div className="p-4">
+              <CardTitle className="text-xl font-semibold text-black px-1 absolute bottom-0 left-0">
+                Ándres Laverde
+              </CardTitle>
+            </div>
+          </CardContent>
         </Card>
+        <Card className="w-339 h-188.16 relative">
+          <CardImage
+            src="src/assets/img/imgWendy.jpg"
+            alt="Descripción de la imagen"
+            className="w-full h-full rounded-lg"
+          />
+          <CardContent
+            className="absolute bottom-0 left-0 right-0"
+            style={{ background: "white" }}
+          >
+            <div className="p-4">
+              <CardTitle className="text-xl font-semibold text-black px-1 absolute bottom-0 left-0">
+                Wendy Sanchez
+              </CardTitle>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="w-339 h-188.16 relative">
+          <CardImage
+            src="src/assets/img/imgCarlos.jpg"
+            alt="Descripción de la imagen"
+            className="w-full h-full rounded-lg"
+          />
+          <CardContent
+            className="absolute bottom-0 left-0 right-0"
+            style={{ background: "white" }}
+          >
+            <div className="p-4">
+              <CardTitle className="text-xl font-semibold text-black px-1 absolute bottom-0 left-0">
+                Carlos Ladino
+              </CardTitle>
+            </div>
+          </CardContent>
+        </Card>
+
+        
       </div>
     </>
   );
-};
+}
 
 export default Home;
